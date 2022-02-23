@@ -25,7 +25,6 @@ names(DataDB)
 SP <- DataDB %>% filter(Language == "Spanish")
 SP.df <- as.data.frame(SP) 
 
-
 SP.df %>% ggplot(aes( x = CountryCode, y=Percentage, fill = IsOfficial )) + 
   geom_bin2d() +
   coord_flip()
